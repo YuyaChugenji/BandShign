@@ -1,0 +1,570 @@
+@charset "UTF-8";
+/* reset */
+body, h1, h2, h3, h4, h5, h6, p, address,
+ul, ol, li, dl, dt, dd, img, form, table, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 100%;
+	text-align: left;
+	list-style-type: none;
+	border-collapse: collapse;
+}
+
+textarea { font-size: 100%; vertical-align:middle;}
+img { border-style: none; display: block; }
+hr { display: none; }
+em{font-style: normal}
+input{line-height:auto;vertical-align:middle;}
+strong.more{color:#c30}
+a{text-decoration: none;}
+
+/* メインページ */
+body { 
+    width: 100%;
+    height: 100vh;
+    background-image: url(/img/top.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.top {
+	width: 30%;
+	height: 480px;
+    margin-top: 100px;
+    color: #333333;
+}
+
+.top h2 {
+    font-size: 36px;
+    font-weight:bold
+}
+
+/* ヘッダー */
+.header {
+    width: 100%;
+    height: 20%;
+    background-color: black;
+    color: #DCDCDC;
+}
+
+.nav a:link a:visited a:hover a:active {
+  color: #DCDCDC;
+}
+
+.nav_wrapper{
+	width: 90%;
+	height: 60px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav {
+	margin-top: 10px;
+	width: 300px;
+}
+
+.nav h2 a {
+    font-size: 26px;
+    color: #DCDCDC;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sign {
+	margin-top: 15px;
+	padding-left: 111px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sign a {
+    color: #DCDCDC;
+    margin-right: 10px;
+}
+
+.top_text {
+    position: relative;
+    z-index: 1;
+    height: 620px;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 65px;
+}
+
+.top_text p {
+	padding-top: 190px;
+    line-height: 98%;
+	font-weight: 800;
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ログイン */
+.login {
+	width: 30%;
+	height: 480px;
+    margin-top: 100px;
+    border: #DCDCDC 2px solid;
+    border-width: thin;
+	border-radius:10px;
+    background-color: #DCDCDC;
+    background:rgba(220,220,220,0.8);
+    display: flex;
+    justify-content: center;
+}
+
+.loginwrap {
+    width: 80%;
+}
+
+.email,.password {
+    width: 100%;
+    margin-top: 60px;
+    font-size: 16px;
+}
+
+.password {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.loginBtn {
+    margin-top: 40px;
+    font-size: 16px;
+}
+
+.formareaa {
+	width: 100%;
+	height: 30px;
+    border: #DCDCDC 2px solid;
+	border-width: thin;
+	border-radius:4px;
+    display: flex;
+    justify-content: center;
+}
+
+.formareab {
+	width: 100%;
+	height: 34px;
+    border: #DCDCDC 2px solid;
+	border-width: thin;
+	border-radius:4px;
+	color: #DCDCDC;
+    background-color:#0377C7 ;
+}
+
+.newcreate {
+    margin-top: 20px;
+}
+
+.zumi {
+    margin-top: 10px;
+}
+
+/* 新規登録画面 */
+.signupform {
+	width: 70%;
+	height: 100%;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    border: #DCDCDC 2px solid;
+    border-width: thin;
+	border-radius:10px;
+    background-color: #DCDCDC;
+    background:rgba(220,220,220,0.8);
+}
+
+.signupform2 {
+	width: 70%;
+	height: 100%;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    border: #DCDCDC 2px solid;
+    border-width: thin;
+	border-radius:10px;
+    background-color: #DCDCDC;
+    background:rgba(220,220,220,0.8);
+}
+
+.signform {
+    height: 100%;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.signname,.sihnemail,.sihnpassword,.sihnprefecture {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.formareac {
+	width: 100%;
+	height: 30px;
+    border: #DCDCDC 2px solid;
+	border-width: thin;
+	border-radius:4px;
+}
+
+.formareae {
+	width: 100%;
+	height: 150px;
+    border: #DCDCDC 2px solid;
+	border-width: thin;
+	border-radius:4px;
+}
+
+.btnform {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.formaread {
+	width: 100px;
+	height: 30px;
+    border: #DCDCDC 2px solid;
+	border-width: thin;
+	border-radius:4px;
+	color: #DCDCDC;
+    background-color:#0377C7 ;
+}
+
+/* メインページ */
+
+.indexwrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchform {
+	width: 70%;
+	height: 120px;
+    margin-top: 30px;
+    border: #DCDCDC 2px solid;
+    border-width: thin;
+	border-radius:10px;
+    background-color: #DCDCDC;
+    background:rgba(220,220,220,0.8);
+}
+
+.searchwrap {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.searchwrap2 {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search {
+	width: 70%;
+	height: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: #DCDCDC 2px solid;
+    border-width: thin;
+	border-radius:10px;
+    background-color: #DCDCDC;
+    background:rgba(220,220,220,0.8);
+}
+
+.searcharea {
+	width: 40%;
+	height: 30px;
+    border: #DCDCDC 2px solid;
+	border-width: thin;
+	border-radius:4px;
+}
+
+.artistimage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.showimage {
+    width: 300px;
+    height: 180px;
+}
+
+.bandshowwrap {
+    width: 320px;
+    height: 320px;
+}
+
+.bandshow {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    width: calc(50%);
+}
+
+.paginate {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* バンドマイページ,詳細ページ */
+.searchforma {
+	width: 70%;
+	height: 625px;
+    margin-top: 50px;
+    border: #DCDCDC 2px solid;
+    border-width: thin;
+	border-radius:10px;
+    background-color: #DCDCDC;
+    background:rgba(220,220,220,0.8);
+}
+
+.band-profile {
+    width: 40%;
+}
+
+.band-edit {
+    margin: 10px 0 0 0 ;
+}
+
+.band-biography {
+    margin-top: 30px;
+    overflow: scroll;
+    overflow: auto;
+    height: 220px;
+    width: 100%;
+    border: #333333 2px solid;
+    border-width: thin;
+	border-radius:10px;
+    background-color: #DCDCDC;
+}
+
+.band-back {
+    margin: 60px 0 10px 0;
+}
+
+/* ライブハウスマイページ,詳細ページ */
+
+.livehouse-prefecture {
+    margin-top: 30px;
+}
+
+.livehouse-back{
+    margin: 60px 0 10px 0;
+}
+
+/* 編集ページ */
+
+.edit_title h2 {
+    font-size: 18px;
+    text-align: center;
+}
+
+.edit-btnform {
+    margin: 60px 0 10px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/* バンド詳細ページ */
+
+.showwrap {
+	width: 70%;
+	height: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: #DCDCDC 2px solid;
+    border-width: thin;
+	border-radius:10px;
+    background-color: #DCDCDC;
+    background:rgba(220,220,220,0.8);
+}
+
+.showmain {
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+.artistimage3 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.showimage2 {
+    width: 100%;
+    height: 100%;
+}
+
+.bandshowwrap3 {
+    width: 55%;
+    height: 100%;
+}
+
+.showbiography1 {
+    margin-top:30px;
+    height: 320px;
+    display: flex;
+	justify-content: space-between;
+}
+
+.showtextform {
+    width: 40%;
+}
+
+.showtext {
+    margin-bottom: 10px;
+}
+
+.header_wrapper{
+	z-index: 2;
+	width: 100%;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.70);
+}
+
+.showbiography2 {
+    margin-top: 30px;
+    overflow: scroll;
+    overflow: auto;
+    height: 220px;
+    width: 100%;
+    border: #333333 2px solid;
+    border-width: thin;
+	border-radius:10px;
+    background-color: #DCDCDC;
+}
+
+.newcreate2 {
+    margin-bottom: 30px;
+}
+
+/* 検索フォーム */
+
+.form-group {
+    margin-top: 16px;
+    display: flex;
+}
+
+.form2 {
+margin-left: 10px;
+}
+
+.kensaku-btn {
+    margin-top: 10px;
+}
+
+
+/* バリデーションエラー */
+
+.vallidationerror {
+    color: rgb(220, 86, 86);
+}
+
+.pagination {
+    display: inline;
+
+}
+
+/* パスワード再発行画面 */
+
+.forget_wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forget_inner {
+	width: 30%;
+	height: 100%;
+    margin-top: 100px;
+    border: #DCDCDC 2px solid;
+    border-width: thin;
+	border-radius:10px;
+    background-color: #DCDCDC;
+    background:rgba(220,220,220,0.8);
+    display: flex;
+    justify-content: center;
+}
+
+.forgrtpass_title {
+    margin: 30px 0px 30px 0px;
+}
+
+.forgrtpass_title h2 {
+    font-size: 18px;
+    text-align: center;
+}
+
+.radio-email {
+    width: 100%;
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.forget_back{
+    margin: 60px 0 10px 0;
+}
+
+/* お気に入り登録完了 */
+
+.like-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.like-inner {
+	width: 30%;
+	height: 100%;
+    margin-top: 100px;
+    border: #DCDCDC 2px solid;
+    border-width: thin;
+	border-radius:10px;
+    background-color: #DCDCDC;
+    background:rgba(220,220,220,0.8);
+    display: flex;
+    justify-content: center;
+}
+
+.like-text {
+    margin: 30px 0 30px 0;
+    width: 80%;
+}
+
+/* お気に入り登録一覧 */
+
+.likeshow_title {
+    margin: 30px 0px 30px 0px;
+}
+
+.likeshow_title h2 {
+    font-size: 18px;
+    text-align: center;
+}

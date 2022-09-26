@@ -176,7 +176,6 @@ class AdminusersController extends BaseController {
         }
 
         //検索フォームに入力された値を取得
-
         $prefecture = $request->input('prefecture');
         $selectprefecture = $prefecture;
         $keyword = $request->input('keyword');
@@ -255,20 +254,12 @@ class AdminusersController extends BaseController {
         ->select('id','name')
         ->first();
 
-
         $banduser = DB::table('bandusers')
         ->where('bandusers.id',$id)
         ->select('bandusers.id','name','email','password','genre_id','prefecture_id','city','biography','image','genre','prefecture')
         ->join('genres', 'bandusers.genre_id', '=', 'genres.id') 
         ->join('prefectures', 'bandusers.prefecture_id', '=', 'prefectures.id') 
         ->first();
-
-        //dd($banduser);
-
-        //if (is_null($banduser)) {
-        //    \Session::flash('err_msg', 'データがありません。');
-        //    return redirect()->route('contact')->with(compact('contacts'));
-        //}
 
         return view('adminbandshow', ['banduser' => $banduser,'users' => $users]);
     }
@@ -295,7 +286,6 @@ class AdminusersController extends BaseController {
         ->where('id','=', $userid)
         ->select('id','name')
         ->first();
-
 
         $livehouseuser = DB::table('livehouseusers')
         ->where('livehouseusers.id',$id)
@@ -347,5 +337,4 @@ class AdminusersController extends BaseController {
             return redirect()->route('adminlivehouseindex')->with('flash_message', '削除に成功しました。');
         }
     }
-
 }

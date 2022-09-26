@@ -125,8 +125,6 @@ class LivehouseusersController extends BaseController {
         ->join('prefectures', 'bandusers.prefecture_id', '=', 'prefectures.id') 
         ->paginate(10);
 
-        //dd($query);
-
         // 都道府県もジャンルも全てを選択
         if($prefecture == "全て" && $genre == "全て") {
         $query = DB::table('bandusers')

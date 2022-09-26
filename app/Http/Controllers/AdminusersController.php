@@ -6,18 +6,17 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
-
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 use App\Models\adminusers;
 use App\Models\banduser;
 use App\Models\Livehouseusers;
 use App\Models\Prefecture;
 use App\Models\Genre;
 use App\Models\Contact;
+
 use App\Mail\ContactSendmail;
-use Illuminate\Support\Facades\DB;
-
-
 
 class AdminusersController extends BaseController {
 

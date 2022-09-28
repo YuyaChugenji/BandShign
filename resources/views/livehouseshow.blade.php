@@ -12,6 +12,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <!-- フラッシュメッセージ用 -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
         <!-- Googleマップ用 -->
         <script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyBHo301aAM5kr1EC3SfZe0vY2pcIOuP9Cc&callback=initMap" async defer></script>
         <script src="https://cdn.geolonia.com/community-geocoder.js"></script>

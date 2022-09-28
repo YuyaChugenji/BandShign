@@ -45,8 +45,6 @@
         <div class='top'>
             <h2>Band Sign</h2>
             <p>
-                サイトの説明
-            </p>
         </div>
 
         <div class='login'>

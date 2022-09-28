@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 use App\Models\banduser;
 use App\Models\Livehouseusers;
 use App\Models\adminusers;
-use App\Models\Like;
+use App\Models\BandLike;
 use App\Models\Genre;
 use App\Models\Prefecture;
 use App\Models\Contact;
@@ -264,7 +264,7 @@ class BandusersController extends BaseController {
         ->first();
 
         // すでにお気に入り登録済み確認
-        $check = DB::table('likes')
+        $check = DB::table('bandlikes')
         ->where('user_id', '=', $userid)
         ->where('post_id', '=', $id)
         ->count();
@@ -633,7 +633,7 @@ class BandusersController extends BaseController {
             'post_id' => $request->input('likeid'),
             ];   
             
-            Like::create($inputs);
+            BandLike::create($inputs);
 
             return redirect()->route('livehouselike')->with('flash_message', 'お気に入り登録しました。');
             
@@ -642,18 +642,16 @@ class BandusersController extends BaseController {
             $likeid =$request->input('likeid');
 
             // すでに登録済みのID確認
-            $inputs = DB::table('likes')
+            $inputs = DB::table('bandlikes')
             ->where('user_id', '=', $userid)
             ->where('post_id', '=', $likeid)
             ->value('id');
 
             //dd($inputs);
 
-            $like = Like::find($inputs);
+            $like = BandLike::find($inputs);
             // レコードを削除
             $like->delete();
-
-            //Like::delete($inputs);
 
             return redirect()->route('livehouselike')->with('flash_message', 'お気に入り登録解除しました。');
 
@@ -705,7 +703,7 @@ class BandusersController extends BaseController {
         ->first();
 
         // お気に入り登録されているライブハウスIDを取得
-        $like_id = DB::table('likes')
+        $like_id = DB::table('bandlikes')
         ->where('user_id','=', $userid)
         ->get('post_id');
 
@@ -714,7 +712,7 @@ class BandusersController extends BaseController {
         ->where('del_flg', '=', 0)
         ->where('user_id', '=', $userid)
         ->select('livehouseusers.id','name','email','password','prefecture_id','city','biography','image','del_flg','user_id','prefecture')
-        ->join('likes', 'post_id', '=', 'livehouseusers.id') 
+        ->join('bandlikes', 'post_id', '=', 'livehouseusers.id') 
         ->join('prefectures', 'livehouseusers.prefecture_id', '=', 'prefectures.id') 
         ->paginate(10);
 
